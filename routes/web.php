@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('author', 'AuthorController');
+Route::resource('magazine', 'MagazineController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
